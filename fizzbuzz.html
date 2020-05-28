@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang = en>
+<head>
+    <title> Title </title>
+    <style>
+       * {
+            font-family: Arial;
+            font-size: 12pt;
+        }
+    </style>
+   
+ </head>
+ <body>
+        <ul id = "fizzbuzz">
+
+        </ul>
+
+    <script>
+        let fblist = document.getElementById('fizzbuzz')
+        let startTime = new Date().getTime()
+        let listData = ""
+            for(let i = 1; i <= 50; i++) {
+                let item = "";
+                if(i%3 == 0) item += "fizz"
+                if(i%5 == 0) item += "buzz"
+                if(item == "") item += i
+                listData += "<li>" + item + "</li>"
+            }
+            fblist.innerHTML = listData
+        let endTime = new Date().getTime()
+        console.log(endTime - startTime)
+            
+    </script>
+ </body>
+ </html>

@@ -1,0 +1,29 @@
+#samplediv {
+    background-color: red;
+    height: 300px;
+    width: 300px;
+}
+
+@media (max-width: 1500px) {
+    #samplediv {
+        background-color: aqua;
+    }
+}
+
+@media (max-width: 1000px) {
+    #samplediv {
+        background-color: greenyellow;
+    }
+}
+
+@media (max-width: 750px) {
+    #samplediv {
+        background-color: rgb(255, 0, 128);
+    }
+}
+
+@media (max-width: 500px) {
+    #samplediv {
+        background-color: purple;
+    }
+}

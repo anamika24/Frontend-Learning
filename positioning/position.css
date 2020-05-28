@@ -1,0 +1,37 @@
+#p1 {
+
+}
+#p2 {
+   /* position: static; */
+   /* position: relative; */
+  /*  position: fixed; */
+  /* position: absolute; */
+  position: sticky;
+}
+div {
+    background-color: lightcyan;
+    border: 5px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+#div3 {
+  /*  position: relative;
+    top: 30px;
+    left: 90px; */
+    position: fixed;
+    top: 30px;   /*from window*/
+}
+ 
+#div2 {
+/*    position: fixed;
+    bottom: 30px;
+    left: 40px; *?
+}
+#div3{
+ /*   position: absolute; */
+    /* shift accordingly with the nearest div */
+}
+
+#div3 {
+    position: sticky;
+}
