@@ -50,7 +50,7 @@ yargs.command({
         }
     },
     handler: function (argv) {
-        console.log("removing a note!!")
+  //      console.log("removing a note!!")
         notes.removeNote(argv.title)
     }
 })
