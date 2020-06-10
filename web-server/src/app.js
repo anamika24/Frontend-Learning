@@ -1,19 +1,22 @@
+// to autosave both js and hbs file- nodemon src/app.js -e js,hbs  (where e- flag is extension)
 const path = require('path')
 const express = require('express')
 const hbs = require('hbs')
 
 const app = express()
 
-// Define paths for Express cpnfig
+// Define paths for express config
+console.log(__dirname, '../public')
 const publicDirectoryPath = path.join(__dirname, '../public')
-const viewsPath = path.join(__dirname, '../templates/views')
-const partialPath = path.join(__dirname, '../templates/partials')
+//const viewsPath = path.join(__dirname, '/templates/views')
+const partialPath = path.join(__dirname, '../partials')
 
-// Setup handlebar engine and view location
+// setup handlebars engine and views location
 app.set('view engine', 'hbs')
-app.use('views', viewsPath)
+//app.use('views', viewsPath)
+hbs.registerPartials(partialPath)
 
-// Setup static directory to serve
+// setup static directory to serve
 app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
@@ -32,8 +35,9 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Help Page',
-        helptext: 'This is some helpful application.'
+        title: 'Help',
+        helptext: 'This is some helpful application.',
+        name: 'Anamika'
     })
 })
 
@@ -53,6 +57,6 @@ app.get('/weather', (req, res) => {
 // app.com
 // app.com/help
 
-app.listen(3000, () => {
-    console.log('Server is up on 3000 port.')
+app.listen(7070, () => {
+    console.log('Server is up on 7070 port.')
 })
