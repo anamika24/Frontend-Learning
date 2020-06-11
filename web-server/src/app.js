@@ -54,8 +54,22 @@ app.get('/weather', (req, res) => {
         forecast: '30 degrees'
     })
 })
-// app.com
-// app.com/help
+
+app.get('/help/*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'Anamika',
+        errorMessage: 'Help article not found'
+    })
+})
+
+app.get('*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'Anamika',
+        errorMessage: 'Page not found'
+    })
+})
 
 app.listen(7070, () => {
     console.log('Server is up on 7070 port.')
